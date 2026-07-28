@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/**
+ * CSS変数
+ */
+:root {
+  --bs-body-font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  --bs-body-font-size-text: 17px;
+}
+
+/**
+ * CSS変数:ライトモード
+ */
+[data-bs-theme="light"] {
+  /* ライトモードのCSS変数 */
+  /*--bs-main-color: red;*/
+
+  --bs-navbar-background-color: #eeeeee;
+  --bs-navbar-border-bottom: 3px solid #888888;
+  --bs-navbar-nav-item-background-color: #fafafa;
+  --bs-navbar-nav-item-border-color: #000000;
+  --bs-navbar-nav-link-text-color: #444444;
+  --bs-section-color: #222222;
+  --bs-section-background-color: #ffffff;
+  --bs-section-odd-color: #000;
+  --bs-section-odd-background-color: #eeeeee;
+  --bs-mv-container-background-color: #ffffff;
+  --bs-mv-container-color: #000000;
+}
+
+/**
+ * CSS変数:ダークモード
+ */
+[data-bs-theme="dark"] {
+  /* ダークモードのCSS変数 */
+  /*--bs-main-color: blue;*/
+
+  --bs-navbar-background-color: #222222;
+  --bs-navbar-border-bottom: 3px solid #888888;
+  --bs-navbar-nav-item-background-color: #111111;
+  --bs-navbar-nav-item-border-color: #ffffff;
+  --bs-navbar-nav-link-text-color: #f8f8f8;
+  --bs-section-color: #eeeeee;
+  --bs-section-background-color: #000000;
+  --bs-section-odd-color: #ffffff;
+  --bs-section-odd-background-color: #222222;
+  --bs-mv-container-background-color: #000000;
+  --bs-mv-container-color: #ffffff;
+}
+
+
+
+
+body {
+  /*font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;*/
+  /*--bs-body-font-family: var(--bs-font-monospace:);*/
+  /*font: 1rem/1.5 var(--bs-font-sans-serif);*/
+
+	font-family: var(--bs-body-font-family);
+	font-size: var(--bs-body-font-size-text);
+  background-color: var(--bs-main-color);
+
+}
+
+
+#jj-navbar .navbar {
+  background-color: var(--bs-navbar-background-color);
+  border-bottom: var(--bs-navbar-border-bottom);
+  /*margin-bottom: 10px;*/
+}
+#jj-navbar .navbar .nav-item {
+	padding-left: 5px;
+	padding-right: 5px;
+  border-bottom: 1px solid transparent;
+}
+#jj-navbar .navbar .nav-item:hover {
+  border-bottom-color: var(--bs-navbar-nav-item-border-color);
+  background: var(--bs-navbar-nav-item-background-color);
+}
+#jj-navbar .navbar .nav-link {
+	color: var(--bs-navbar-nav-link-text-color);
+}
+
+
+#jj-main .mv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  /*background-color: #fff;*/
+  background: no-repeat center top / 100% url(../img/mv.png);
+
+}
+
+#jj-main .mv-container {
+  background: var(--bs-mv-container-background-color);
+  color: var(--bs-mv-container-color);
+  opacity: 70%;
+  border-radius: 5px;
+}
+
+#jj-main .mv-title {
+  line-height: 1.2;
+  padding-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: .1em;
+}
+
+#jj-main .mv-subtitle {
+  line-height: 1;
+  margin-bottom: 40px;
+  letter-spacing: .08em;
+}
+
+
+#jj-main .section {
+	/*background-color:yellow;*/
+  color: var(--bs-section-color);
+  background-color: var(--bs-section-background-color);
+}
+
+#jj-main .section-title {
+	/*margin-top:50px;*/
+	/*background-color:red;*/
+}
+
+#jj-main .section:nth-of-type(odd) {
+  color: var(--bs-section-odd-color);
+  background-color: var(--bs-section-odd-background-color);
+}
+
+
+#jj-footers {
+  background-color: #000;
+  color: #ffffff;
+}
+
+
+
